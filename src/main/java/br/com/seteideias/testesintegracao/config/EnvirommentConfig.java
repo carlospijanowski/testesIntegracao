@@ -1,14 +1,18 @@
 package br.com.seteideias.testesintegracao.config;
 
+import lombok.extern.log4j.Log4j2;
+
+@Log4j2
 public class EnvirommentConfig {
 
-    private  String somePhrase;
+    private final String somePhrase;
     public EnvirommentConfig(String somePhrase){
         this.somePhrase = somePhrase;
     }
 
-    public void doSomething () {
-        System.out.println(somePhrase);
+    public String doSomething () {
+        log.info(somePhrase);
+        return somePhrase;
     }
 
 }

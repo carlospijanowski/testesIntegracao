@@ -18,7 +18,8 @@ class IntegrationTest {
 
     @Test
     void test (){
-        envirommentConfig.doSomething();
+        var s = envirommentConfig.doSomething();
+        Assertions.assertEquals("in production", s);
     }
 
 
